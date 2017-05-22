@@ -1,0 +1,114 @@
+.op-section .item-2{
+	width: 100vw;
+	height: 100vh;
+	background:url(../images/base.jpg) no-repeat center center;
+	background-size: cover;
+	position:relative;
+	/*-webkit-filter: blur(5px);*/
+		
+}
+
+/*大图翻转效果*/
+.boxx{
+	width:500px;
+	height:500px;
+	
+	transform-style:preserve-3d ;perspective: 3000px;
+	position:absolute;
+	left:10%;
+	top:30%;
+}
+.sonn{width:500px;height:500px;position: absolute;left: 0;top: 0;transition: transform 1s ;}
+.sonn2{ transform: rotatey(-180deg);}
+.boxx:hover .sonn,.boxx.hover .sonn{ transform: rotatey(180deg);}
+.boxx:hover .sonn2,.boxx.hover .sonn2{ transform: rotatey(0deg);}
+
+
+.op-section .item-2 span{
+	text-align:center;
+	font-size:50px;
+	height:60px;
+	width:200px
+}
+
+.op-section .item-2 .centerner{
+	position:absolute;
+	top: 15%;
+	left: 45%;
+	right:0;
+	bottom:0;
+	transition:all 3s;
+	animation:zoomInDown 3s ease forwards,hcolor 3s infinite;
+	
+
+}
+.information{
+	text-align:center;
+	height:250px;
+	width:65px;
+	padding:270px 845px;
+}
+.information .row{
+	margin-top:60px;
+	width:250px;
+	height:65px;
+	text-align:center;
+	animation: fontbackcolor 2s infinite;
+}
+
+@keyframes zoomInDown {
+  0% {
+    opacity: 0;
+    transform: scale3d(.1, .1, .1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(.475, .475, .475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+}
+
+@keyframes fontbackcolor{
+	0%{
+		background-color:#9A93AC;
+		color:#121CE3;	
+	}
+	50%{
+		background-color:#8F8C7C;
+				color:#D7C8C8;	
+	
+	}
+	100%{
+		background-color:#BCB4BA;	
+	}	
+	
+}
+@keyframes hcolor{
+	0%{
+		color:#E8E2E2;
+	}
+	50%{
+		color:#8E8282;
+	}
+	100%{
+		color:#494545;
+	}
+}
+#main{
+	position:absolute;
+	right:15%;
+	top:40%;
+}
+.grid {
+	width: 400px; height: 300px;	
+	perspective: 500px;
+	float:right;
+	
+}
+#main .grid img{width: 60px; height: 60px; display: block; float: left;margin:10px 10px;}
+.btn {
+	float:right;padding-right:500px;
+}
+.btn:hover {}
